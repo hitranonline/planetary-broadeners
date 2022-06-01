@@ -26,25 +26,22 @@ The broadening Python files are designed to apply broadening parameters to HITRA
 
 Explanation of the Input & Output Files
 
-Input files are given in the "Input Broadening Files" folder and are <br>sampled<\br> portions of the HITRAN2020 line list data (not the complete line list).
-In particular, the input files are HITRAN line lists in default format called .par (see https://hitran.org/docs/definitions-and-units/ for an explanation of the .par format)
+Input files are given in the "Input Broadening Files" folder and are **sampled** portions of the HITRAN2020 line list data (not the complete line list).
+In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
 
-We highly recommend that users directly download the current line lists from the HITRAN database (https://hitran.org/) prior to applying these broadening codes.
+We highly recommend that users directly download the current line lists from the HITRAN database [HITRAN](https://hitran.org/) prior to applying these broadening codes.
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
-If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting the read-in line list are the rotational quantum number(s) and the branch columns 
-(for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number
-(J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
 
-Output files are available in the "Output Broadening Files" folder. The output files are examples of what users should receive if they run the given input files correctly 
-from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
+	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number (J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
+
+Output files are available in the "Output Broadening Files" folder. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
 ===========================================================================
 
 Accessing Broadening Parameters via HITRANonline
 
-To access these additional foreign-broadening parameters via the HITRAN database directly, 
-HITRAN users can proceed to https://hitran.org/ to create a customized output file when downloading line-by-line data.
+To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to [HITRAN](https://hitran.org/) to create a customized output file when downloading line-by-line data.
 
 Here is an example of adding H2 broadening parameters to a line list output within the HITRAN database.
 The steps are given as follows:
@@ -99,16 +96,19 @@ Definitions
 
 Broadening parameters refer to the following:
 
-	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH$_2$, γHe, γCO$_2$ and γH$_2$O for H$_2$-, He-, CO$_2$- and H$_2$O-broadening respectively.
+	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH$_2$, γHe, γCO$_2$ and γH$_2$O for H$_2$-, He-, 
+	CO$_2$- and H$_2$O-broadening respectively.
 	
-	2) Temperature dependence (exponent) of these half widths, denoted as ηH$_2$, ηHe, ηCO$_2$, ηH$_2$O and defined through the power law (see below).
+	2) Temperature dependence (exponent) of these half widths, denoted as ηH$_2$, ηHe, ηCO$_2$, ηH$_2$O and defined 
+	through the power law (see below).
 	
-	3) Collisional line shifts, denoted as δH$_2$, δHe, δCO$_2$, δH$_2$O which at the moment are available only for some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
+	3) Collisional line shifts, denoted as δH$_2$, δHe, δCO$_2$, δH$_2$O which at the moment are available only for 
+	some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
 The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T0)([T0/T]^η)
 	where T0 is the reference temperature (296K in HITRAN) and γ(T0) is the HWHM at the reference temperature.
 
-The broadening Python files utilize 3rd-to-4th order Padé approximants (equation given below) to populate the broadening data throughout the line list.
+The broadening Python files utilize 3$^{rd}$-to-4$^{th}$ order Padé approximants (equation given below) to populate the broadening data throughout the line list.
 
 The Padé approximants were fit to available laboratory data sets in order to extrapolate to other transitions where data was not available.
 
