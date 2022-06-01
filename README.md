@@ -2,7 +2,7 @@
 ==============================================================================
 License
 
-See the LICENSE.txt file available in the "Broadening .py Files" folder.
+See the LICENSE.txt file available on this GitHub page.
 
 These HITRAN Broadening Python files are distributed under the Apache 2.0 license
 
