@@ -1,5 +1,5 @@
 # planetary-broadeners
-==============================================================================
+===========================================================================
 License
 
 See the LICENSE.txt file available on this GitHub page.
@@ -8,20 +8,20 @@ These HITRAN Broadening Python files are distributed under the Apache 2.0 licens
 
 Copyright 2022 HITRAN Team. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 
-==============================================================================
+===========================================================================
 
 Citation
 
 Y. Tan, F.M. Skinner, S. Samuels, R.J. Hargreaves, R. Hashemi, I.E. Gordon (2022), Submitted to the Astrophysical Journal Supplement Series in March 2022
 "H2, He, and CO2 pressure-induced parameters for the HITRAN database. Part II: Line lists of CO2, N2O, CO, SO2, OH, OCS, H2CO, HCN, PH3, H2S and GeH4"
 
-==============================================================================
+===========================================================================
 
 Purpose
 
-The broadening Python files are designed to apply broadening parameters to HITRAN line lists through dependency on rotational quantum numbers (J+0.2Ka or |m| values).
+The broadening Python files are designed to apply broadening parameters to HITRAN line lists through dependency on rotational quantum numbers.
 
-==============================================================================
+===========================================================================
 
 Explanation of the Input & Output Files
 
@@ -38,7 +38,7 @@ If the user is not using a HITRAN .par line list, then the primary columns to is
 Output files are available in the "Output Broadening Files" folder. The output files are examples of what users should receive if they run the given input files correctly 
 from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
-==============================================================================
+===========================================================================
 
 Accessing Broadening Parameters via HITRANonline
 
@@ -69,7 +69,7 @@ The steps are given as follows:
 	Press "Okay" to exit the warning
 	Press "Start Data Search" to retrieve the final line list and its corresponding references with the broadening parameters included.
 
-==============================================================================
+===========================================================================
 
 Definitions
 
@@ -94,7 +94,7 @@ The Padé approximants were fit to available laboratory data sets in order to ex
 The 3rd-to-4th order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|^2 + a3|m|^3)/(1 + b1|m| + b2|m|^2 + b3|m|^3 + b4|m|^4)
 	where |m| is the rotational running index, as defined previously above.
 
-==============================================================================
+===========================================================================
 
 How to use the broadening Python scripts?
 
@@ -117,4 +117,4 @@ temperature dependence of Helium, broadening of Hydrogen, temperature dependence
 
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
-==============================================================================
+===========================================================================
