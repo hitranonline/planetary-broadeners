@@ -99,17 +99,17 @@ Definitions
 
 Broadening parameters refer to the following:
 
-	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH$_2$, γHe, γCO$_2$ and γH$_2$O for H$_2$-, He-, 
-	CO$_2$- and H$_2$O-broadening respectively.
+	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH2, γHe, γCO2 and γH2O for H2-, He-, 
+	CO2- and H2O-broadening respectively.
 	
-	2) Temperature dependence (exponent) of these half widths, denoted as ηH$_2$, ηHe, ηCO$_2$, ηH$_2$O and defined 
+	2) Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined 
 	through the power law (see below).
 	
-	3) Collisional line shifts, denoted as δH$_2$, δHe, δCO$_2$, δH$_2$O which at the moment are available only for 
+	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for 
 	some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
-The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T0)([T0/T]^η)
-	where T0 is the reference temperature (296K in HITRAN) and γ(T0) is the HWHM at the reference temperature.
+The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T$_0$)([T$_0$/T]^η)
+	where T0 is the reference temperature (296K in HITRAN) and γ(T$_0$) is the HWHM at the reference temperature.
 
 The broadening Python files utilize 3$^{rd}$-to-4$^{th}$ order Padé approximants (equation given below) to populate the broadening data throughout the line list.
 
