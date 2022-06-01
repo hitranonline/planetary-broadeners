@@ -26,7 +26,7 @@ The broadening Python files are designed to apply broadening parameters to HITRA
 
 Explanation of the Input & Output Files
 
-Input files are given in the "Input Broadening Files" folder and are **sampled** portions of the HITRAN2020 line list data (not the complete line list).
+Input files are given in the "Input Broadening Files" folder and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
 
 We highly recommend that users directly download the current line lists from the HITRAN database [HITRAN](https://hitran.org/) prior to applying these broadening codes.
