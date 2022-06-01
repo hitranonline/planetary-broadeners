@@ -46,27 +46,44 @@ To access these additional foreign-broadening parameters via the HITRAN database
 HITRAN users can proceed to https://hitran.org/ to create a customized output file when downloading line-by-line data.
 
 Here is an example of adding H2 broadening parameters to a line list output within the HITRAN database.
-The steps are given as follows:\n
-	Login (only requires your name and email address)\n
-	Go to Line-by-Line under Data Access\n
-	Choose a molecule\n
-	Choose the isotopologues of the molecule\n
-	Specify your spectral range\n
-	(!STOP! This step is the important part where HITRAN is asking what the output format should be)\n
-	Scroll down and click the green button (left-hand side) that says "Create New Output Format"\n
-	(Now you should see a page that says "New Output Format")\n
-	Under "Available Parameters" choose ".par line"\n
-	Then under "Available Parameters" choose "γH2" then "ηH2" and "δH2"\n
-	Give your output format a name within the "Output Format Name:" box\n
-	Give your output format a description within the "Description:" box\n
-	(You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)\n
-	Now click the green button "Save and Return to Data Search"\n
+The steps are given as follows:
+
+	Login (only requires your name and email address)
+	
+	Go to Line-by-Line under Data Access
+	
+	Choose a molecule
+	
+	Choose the isotopologues of the molecule
+	
+	Specify your spectral range
+	
+	(!STOP! This step is the important part where HITRAN is asking what the output format should be)
+	
+	Scroll down and click the green button (left-hand side) that says "Create New Output Format"
+	
+	(Now you should see a page that says "New Output Format")
+	
+	Under "Available Parameters" choose ".par line"
+	
+	Then under "Available Parameters" choose "γH2" then "ηH2" and "δH2"
+	
+	Give your output format a name within the "Output Format Name:" box
+	
+	Give your output format a description within the "Description:" box
+	
+	(You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)
+	
+	Now click the green button "Save and Return to Data Search"
+	
 	(You might get a warning that reads:
 	"You have not selected "Global isotopologue ID" or "Molecule ID" and "Isotopologue ID" 
 	among of your parameters and so may have no way to know which transition corresponds to which species. Proceed?" 
 	Do not worry about this warning, we have the both the "Molecule ID" and "Isotopologue ID" within the HITRAN default .par format, 
-	which we already added to our output. Therefore, please proceed with confidence even if you receive this warning.)\n
-	Press "Okay" to exit the warning\n
+	which we already added to our output. Therefore, please proceed with confidence even if you receive this warning.)
+	
+	Press "Okay" to exit the warning
+	
 	Press "Start Data Search" to retrieve the final line list and its corresponding references with the broadening parameters included.
 
 ===========================================================================
@@ -74,11 +91,13 @@ The steps are given as follows:\n
 Definitions
 
 |m| values are the rotational running index. |m| is defined with the following relationships to the J rotational quanta:
+
 						P-branch: m = -J"
 						Q-branch: m = J"
 						R-branch: m = J"+1
 
 Broadening parameters refer to the following:
+
 	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH2, γHe, γCO2 and γH2O for H2-, He-, CO2- and H2O-broadening respectively.
 	2) Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined through the power law (see below).
 	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for some HITRAN molecules 
@@ -105,15 +124,21 @@ To run these broadening Python files on your computer, make sure you have Python
 Once the broadening Python files and the Input files are in the same folder on your machine, you can then run the Python scripts on the command line (example below).
 
 Example of running the Python script of CO.py with Input file CO.par and Output file Output_CO.par with Anaconda's command prompt tool:
+
 (First locate the directory where the downloaded Broadening Python files are located): cd filename (to go to the file named filename)
+
 										       cd.. (to go back to the previous folder you were in)
+										       
 										       Python CO.py (once you are in the folder with the Python script and input file)
+										       
 										       CO.par (You will be asked to type the input file name)
+										       
 										       Output_CO.par (You will be asked to type the output file name)
+										       
 							(If the Python script works correctly then the last message is given below (in this case for CO.py))
 							end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
-(This message means that the original HITRAN .par input file is given as part of the output, with extra columns (on the right-hand side) containing broadening of Helium, 
-temperature dependence of Helium, broadening of Hydrogen, temperature dependence of Hydrogen, broadening of Carbon Dioxide and temperature dependence of Carbon Dioxide)
+							
+(This message means that the original HITRAN .par input file is given as part of the output, with extra columns (on the right-hand side) containing broadening of Helium, temperature dependence of Helium, broadening of Hydrogen, temperature dependence of Hydrogen, broadening of Carbon Dioxide and temperature dependence of Carbon Dioxide)
 
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
