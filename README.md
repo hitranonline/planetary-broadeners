@@ -42,9 +42,9 @@ Output files are available in the "Output Broadening Files" folder. The output f
 
 ===========================================================================
 
-Accessing Broadening Parameters via HITRANonline
+Accessing Broadening Parameters via HITRAN*online*
 
-To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to [HITRAN](https://hitran.org/) to create a customized output file when downloading line-by-line data.
+To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to [HITRAN Database](https://hitran.org/) to create a customized output file when downloading line-by-line data.
 
 Here is an example of adding H2 broadening parameters to a line list output within the HITRAN database.
 The steps are given as follows:
