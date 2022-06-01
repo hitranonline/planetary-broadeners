@@ -99,9 +99,10 @@ Definitions
 Broadening parameters refer to the following:
 
 	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH2, γHe, γCO2 and γH2O for H2-, He-, CO2- and H2O-broadening respectively.
+	
 	2) Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined through the power law (see below).
-	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for some HITRAN molecules 
-	   and in some cases only for some specifically selected lines of these molecules. 
+	
+	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
 The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T0)([T0/T]^η)
 	where T0 is the reference temperature (296K in HITRAN) and γ(T0) is the HWHM at the reference temperature.
@@ -127,16 +128,17 @@ Example of running the Python script of CO.py with Input file CO.par and Output 
 
 (First locate the directory where the downloaded Broadening Python files are located): cd filename (to go to the file named filename)
 
-										       cd.. (to go back to the previous folder you were in)
+							cd.. (to go back to the previous folder you were in)
 										       
-										       Python CO.py (once you are in the folder with the Python script and input file)
+							Python CO.py (once you are in the folder with the Python script and input file)
 										       
-										       CO.par (You will be asked to type the input file name)
+							CO.par (You will be asked to type the input file name)
 										       
-										       Output_CO.par (You will be asked to type the output file name)
+							Output_CO.par (You will be asked to type the output file name)
 										       
-							(If the Python script works correctly then the last message is given below (in this case for CO.py))
-							end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
+				(If the Python script works correctly then the last message is given below (in this case for CO.py))
+					
+					end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
 							
 (This message means that the original HITRAN .par input file is given as part of the output, with extra columns (on the right-hand side) containing broadening of Helium, temperature dependence of Helium, broadening of Hydrogen, temperature dependence of Hydrogen, broadening of Carbon Dioxide and temperature dependence of Carbon Dioxide)
 
