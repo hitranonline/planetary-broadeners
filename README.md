@@ -13,7 +13,7 @@ Copyright 2022 HITRAN Team. You may obtain a copy of the License at http://www.a
 Citation
 
 Y. Tan, F.M. Skinner, S. Samuels, R.J. Hargreaves, R. Hashemi, I.E. Gordon (2022), Submitted to the Astrophysical Journal Supplement Series in March 2022
-"H2, He, and CO2 pressure-induced parameters for the HITRAN database. Part II: Line lists of CO2, N2O, CO, SO2, OH, OCS, H2CO, HCN, PH3, H2S and GeH4"
+"H$_2$, He, and CO2 pressure-induced parameters for the HITRAN database. Part II: Line lists of CO2, N2O, CO, SO2, OH, OCS, H2CO, HCN, PH3, H2S and GeH4"
 
 ===========================================================================
 
