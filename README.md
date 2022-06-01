@@ -115,7 +115,7 @@ The broadening Python files utilize 3$^{rd}$-to-4$^{th}$ order Padé approximant
 
 The Padé approximants were fit to available laboratory data sets in order to extrapolate to other transitions where data was not available.
 
-The 3rd-to-4th order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|$^2$ + a3|m|$^3$)/(1 + b1|m| + b2|m|$^2$ + b3|m|$^3$ + b4|m|$^4$)
+The 3$^{rd}$-to-4$^{th}$ order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|$^2$ + a3|m|$^3$)/(1 + b1|m| + b2|m|$^2$ + b3|m|$^3$ + b4|m|$^4$)
 	where |m| is the rotational running index, as defined previously above.
 
 ===========================================================================
