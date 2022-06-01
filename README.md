@@ -14,7 +14,7 @@ Citation
 
 Y. Tan, F.M. Skinner, S. Samuels, R.J. Hargreaves, R. Hashemi, I.E. Gordon (2022), Submitted to the Astrophysical Journal Supplement Series in March 2022
 "H$_2$, He, and CO$_2$ pressure-induced parameters for the HITRAN database. 
-Part II: Line lists of CO$_2$, N$_2$O, CO, SO$_2$, OH, OCS, H2CO, HCN, PH$_3$, H2S and GeH$_4$"
+Part II: Line lists of CO$_2$, N$_2$O, CO, SO$_2$, OH, OCS, H$_{2}$CO, HCN, PH$_3$, H2S and GeH$_4$"
 
 ===========================================================================
 
@@ -33,7 +33,10 @@ We highly recommend that users directly download the current line lists from the
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
 
-	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number (J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
+	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting the 
+	read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches 
+	are not needed). This is due to the fact that the main data columns used to apply broadening parameters are 
+	dependent on rotational quantum number (J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
 
 Output files are available in the "Output Broadening Files" folder. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
