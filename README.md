@@ -108,14 +108,14 @@ Broadening parameters refer to the following:
 	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for 
 	some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
-The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T$_0$)([T$_0$/T]^η)
+The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T$_0$)([T$_0$/T])$^η$
 	where T0 is the reference temperature (296K in HITRAN) and γ(T$_0$) is the HWHM at the reference temperature.
 
 The broadening Python files utilize 3$^{rd}$-to-4$^{th}$ order Padé approximants (equation given below) to populate the broadening data throughout the line list.
 
 The Padé approximants were fit to available laboratory data sets in order to extrapolate to other transitions where data was not available.
 
-The 3rd-to-4th order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|^2 + a3|m|^3)/(1 + b1|m| + b2|m|^2 + b3|m|^3 + b4|m|^4)
+The 3rd-to-4th order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|$^2$ + a3|m|$^3$)/(1 + b1|m| + b2|m|$^2$ + b3|m|$^3$ + b4|m|$^4$)
 	where |m| is the rotational running index, as defined previously above.
 
 ===========================================================================
