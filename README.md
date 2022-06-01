@@ -16,7 +16,7 @@ Y. Tan, F.M. Skinner, S. Samuels, R.J. Hargreaves, R. Hashemi, I.E. Gordon (2022
 "H$_2$, He, and CO$_2$ pressure-induced parameters for the HITRAN database. 
 Part II: Line lists of CO$_2$, N$_2$O, CO, SO$_2$, OH, OCS, 
 
-H$_2$CO, 
+H_2CO, 
 
 HCN, PH$_3$, 
 
