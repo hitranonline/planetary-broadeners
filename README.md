@@ -2,7 +2,7 @@
 ===========================================================================
 License
 
-See the LICENSE.txt file available on this GitHub page.
+See the LICENSE file available on this GitHub page.
 
 These HITRAN Broadening Python files are distributed under the Apache 2.0 license
 
@@ -26,7 +26,7 @@ The broadening Python files are designed to apply broadening parameters to HITRA
 
 Explanation of the Input & Output Files
 
-Input files are given in the "Input Broadening Files" folder and are sampled portions of the HITRAN2020 line list data (not the complete line list).
+Input files are given in the "Input Broadening Files" folder and are <br>sampled<\br> portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see https://hitran.org/docs/definitions-and-units/ for an explanation of the .par format)
 
 We highly recommend that users directly download the current line lists from the HITRAN database (https://hitran.org/) prior to applying these broadening codes.
