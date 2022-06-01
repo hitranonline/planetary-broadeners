@@ -46,7 +46,7 @@ Accessing Broadening Parameters via HITRAN*online*
 
 To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to the [HITRAN Database](https://hitran.org/) to create a customized output file when downloading line-by-line data.
 
-Here is an example of adding H2 broadening parameters to a line list output within the HITRAN database.
+Here is an example of adding H$_2$ broadening parameters to a line list output within the HITRAN database.
 The steps are given as follows:
 
 	Login (only requires your name and email address)
