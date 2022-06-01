@@ -46,27 +46,27 @@ To access these additional foreign-broadening parameters via the HITRAN database
 HITRAN users can proceed to https://hitran.org/ to create a customized output file when downloading line-by-line data.
 
 Here is an example of adding H2 broadening parameters to a line list output within the HITRAN database.
-The steps are given as follows:
-	Login (only requires your name and email address)
-	Go to Line-by-Line under Data Access
-	Choose a molecule
-	Choose the isotopologues of the molecule
-	Specify your spectral range
-	(!STOP! This step is the important part where HITRAN is asking what the output format should be)
-	Scroll down and click the green button (left-hand side) that says "Create New Output Format"
-	(Now you should see a page that says "New Output Format")
-	Under "Available Parameters" choose ".par line"
-	Then under "Available Parameters" choose "γH2" then "ηH2" and "δH2"
-	Give your output format a name within the "Output Format Name:" box
-	Give your output format a description within the "Description:" box
-	(You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)
-	Now click the green button "Save and Return to Data Search"
+The steps are given as follows:\n
+	Login (only requires your name and email address)\n
+	Go to Line-by-Line under Data Access\n
+	Choose a molecule\n
+	Choose the isotopologues of the molecule\n
+	Specify your spectral range\n
+	(!STOP! This step is the important part where HITRAN is asking what the output format should be)\n
+	Scroll down and click the green button (left-hand side) that says "Create New Output Format"\n
+	(Now you should see a page that says "New Output Format")\n
+	Under "Available Parameters" choose ".par line"\n
+	Then under "Available Parameters" choose "γH2" then "ηH2" and "δH2"\n
+	Give your output format a name within the "Output Format Name:" box\n
+	Give your output format a description within the "Description:" box\n
+	(You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)\n
+	Now click the green button "Save and Return to Data Search"\n
 	(You might get a warning that reads:
 	"You have not selected "Global isotopologue ID" or "Molecule ID" and "Isotopologue ID" 
 	among of your parameters and so may have no way to know which transition corresponds to which species. Proceed?" 
 	Do not worry about this warning, we have the both the "Molecule ID" and "Isotopologue ID" within the HITRAN default .par format, 
-	which we already added to our output. Therefore, please proceed with confidence even if you receive this warning.)
-	Press "Okay" to exit the warning
+	which we already added to our output. Therefore, please proceed with confidence even if you receive this warning.)\n
+	Press "Okay" to exit the warning\n
 	Press "Start Data Search" to retrieve the final line list and its corresponding references with the broadening parameters included.
 
 ===========================================================================
