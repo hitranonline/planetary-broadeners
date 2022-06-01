@@ -29,7 +29,7 @@ Explanation of the Input & Output Files
 Input files are given in the "Input Broadening Files" folder and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
 
-We highly recommend that users directly download the current line lists from the HITRAN database [HITRAN](https://hitran.org/) prior to applying these broadening codes.
+We highly recommend that users directly download the current line lists from the [HITRAN](https://hitran.org/) database prior to applying these broadening codes.
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
 
