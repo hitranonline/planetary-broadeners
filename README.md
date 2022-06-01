@@ -130,7 +130,9 @@ Once the broadening Python files and the Input files are in the same folder on y
 
 Example of running the Python script of CO.py with Input file CO.par and Output file Output_CO.par with Anaconda's command prompt tool:
 
-(First locate the directory where the downloaded Broadening Python files are located): cd filename (to go to the file named filename)
+(First locate the directory where the downloaded Broadening Python files are located): 
+	
+	cd filename (to go to the file named filename)
 
 	cd.. (to go back to the previous folder you were in)
 										       
