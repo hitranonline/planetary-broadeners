@@ -42,7 +42,7 @@ Output files are available in the "Output-Broadening-Files" directory. The outpu
 
 To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to the [HITRAN Database](https://hitran.org/) to create a customized output file when downloading line-by-line data.
 
-Here is an example of adding H$_2$ broadening parameters to a line list output within the HITRAN database.
+Here is an example of adding H<sub>2</sub> broadening parameters to a line list output within the HITRAN database.
 The steps are given as follows:
 
 - Login (only requires your name and email address)
@@ -54,7 +54,7 @@ The steps are given as follows:
 - Scroll down and click the green button (left-hand side) that says "Create New Output Format"
 - (Now you should see a page that says "New Output Format")
 - Under "Available Parameters" choose ".par line"
-- Then under "Available Parameters" choose "γH2" then "ηH2" and "δH2"
+- Then under "Available Parameters" choose "&gamma;<sub>H2</sub>" then "n<sub>H2</sub>" and "&delta;<sub>H2</sub>"
 - Give your output format a name within the "Output Format Name:" box
 - Give your output format a description within the "Description:" box
 - (You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)
@@ -76,17 +76,19 @@ Broadening parameters refer to the following:
 
 1. Lorentzian half-widths at half maximum (HWHM) denoted as &gamma;<sub>H2</sub>, &gamma;<sub>He</sub>, &gamma;<sub>CO2</sub> and &gamma;<sub>H2O</sub> for H<sub>2</sub>-, He-, CO<sub>2</sub>- and H<sub>2</sub>O-broadening respectively.
 	
-2. Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined through the power law (see below).
+2. Temperature dependence (exponent) of these half widths, denoted as n<sub>H2</sub>, n<sub>He</sub>, n<sub>CO2</sub>, n<sub>H2O</sub> and defined through the power law (see below).
 	
-3. Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
+3. Collisional line shifts, denoted as &delta;<sub>H2</sub>, &delta;<sub>He</sub>, &delta;<sub>CO2</sub> and &delta;<sub>H2O</sub> which at the moment are available only for some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
-The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T$_0$)([T$_0$/T])$^η$ where T0 is the reference temperature (296K in HITRAN) and γ(T$_0$) is the HWHM at the reference temperature.
+The power law equation for determining the HWHM at T (Temperature) is given as: &gamma;(T) = &gamma;(T<sub>0</sub>)([T<sub>0</sub>/T])<sup>n</sup> where T<sub>0</sub> is the reference temperature (296K in HITRAN) and &gamma;(T<sub>0</sub>) is the HWHM at the reference temperature.
 
-The broadening Python files utilize 3$^{rd}$-to-4$^{th}$ order Padé approximants (equation given below) to populate the broadening data throughout the line list.
+The broadening Python files utilize 3<sup>rd</sup>-to-4<sup>th</sup> order Pad&eacute; approximants (equation given below) to populate the broadening data throughout the line list.
 
 The Padé approximants were fit to available laboratory data sets in order to extrapolate to other transitions where data was not available.
 
-The 3$^{rd}$-to-4$^{th}$ order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|$^2$ + a3|m|$^3$)/(1 + b1|m| + b2|m|$^2$ + b3|m|$^3$ + b4|m|$^4$) where |m| is the rotational running index, as defined previously above.
+The 3<sup>rd</sup>-to-4<sup>th</sup> order Pad&eacute; approximant: 
+- &gamma;<sub>x</sub>(|m|) = (a<sub>0</sub>+a<sub>1</sub>|m|+a<sub>2</sub>|m|<sup>2</sup>+a<sub>3</sub>|m|<sup>3</sup>)/(1+b<sub>1</sub>|m|+b<sub>2</sub>|m|<sup>2</sup>+b<sub>3</sub>|m|<sup>3</sup>+b<sub>4</sub>|m|<sup>4</sup>) 
+where |m| is the rotational running index, as defined previously above.
 
 
 ## How to use the broadening Python scripts?
