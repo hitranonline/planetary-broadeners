@@ -22,20 +22,16 @@ The broadening Python files are designed to apply broadening parameters to HITRA
 
 ## Explanation of the Input & Output Files
 
-Input files are given in the "Input-Broadening-Files" directory and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
+Input files are given in the `Input-Broadening-Files` directory and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
 
 We highly recommend that users directly download the current line lists from the [HITRAN](https://hitran.org/) database prior to applying these broadening codes.
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
 
-	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting 
-	the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules 
-	the branches are not needed). This is due to the fact that the main data columns used to apply 
-	broadening parameters are dependent on rotational quantum number (J lower, and for some molecules Ka 
-    lower) and Branch letter (P, Q or R).
+If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting  the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number (J", and for some molecules K<sub>a</sub>") and Branch letter (e.g., P, Q or R).
 
-Output files are available in the "Output-Broadening-Files" directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
+Output files are available in the `Output-Broadening-Files` directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
 
 ## Downloading Broadening Parameters via HITRAN*online*
@@ -80,26 +76,28 @@ Broadening parameters refer to the following:
 	
 3. Collisional line shifts, denoted as &delta;<sub>H2</sub>, &delta;<sub>He</sub>, &delta;<sub>CO2</sub> and &delta;<sub>H2O</sub> which at the moment are available only for some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
 
-The power law equation for determining the HWHM at T (Temperature) is given as: &gamma;(T) = &gamma;(T<sub>0</sub>)([T<sub>0</sub>/T])<sup>n</sup> where T<sub>0</sub> is the reference temperature (296K in HITRAN) and &gamma;(T<sub>0</sub>) is the HWHM at the reference temperature.
+The power law equation for determining the HWHM at T (Temperature) is given as: &gamma;(T) = &gamma;(T<sub>0</sub>)[(T<sub>0</sub>/T)]<sup>n</sup> where T<sub>0</sub> is the reference temperature (296K in HITRAN) and &gamma;(T<sub>0</sub>) is the HWHM at the reference temperature.
 
 The broadening Python files utilize 3<sup>rd</sup>-to-4<sup>th</sup> order Pad&eacute; approximants (equation given below) to populate the broadening data throughout the line list.
 
 The Padé approximants were fit to available laboratory data sets in order to extrapolate to other transitions where data was not available.
 
 The 3<sup>rd</sup>-to-4<sup>th</sup> order Pad&eacute; approximant: 
+
 - &gamma;<sub>x</sub>(|m|) = (a<sub>0</sub>+a<sub>1</sub>|m|+a<sub>2</sub>|m|<sup>2</sup>+a<sub>3</sub>|m|<sup>3</sup>)/(1+b<sub>1</sub>|m|+b<sub>2</sub>|m|<sup>2</sup>+b<sub>3</sub>|m|<sup>3</sup>+b<sub>4</sub>|m|<sup>4</sup>) 
+
 where |m| is the rotational running index, as defined previously above.
 
 
 ## How to use the broadening Python scripts?
 
 The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
-For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO$_2$ (Sulfur Dioxide) line list.
+For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO<sup>2</sup> (Sulfur Dioxide) line list.
 
-To run these broadening Python files on your computer, make sure you have Python installed and the broadening Python files downloaded on your local machine.
+To run these broadening python scripts, make sure you have Python installed and the broadening Python files downloaded on your local machine.
 
-- Download the complete "planetary-broadeners" repository directory to local storage from GitHub
-- Alternatively, clone the "planetary-broadeners" git repository
+- Download the complete contents of the `planetary-broadeners` repository to local storage
+- Alternatively, clone the `planetary-broadeners` repository to your local machine
         
 Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
 ```
