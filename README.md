@@ -1,6 +1,6 @@
-# planetary-broadeners
+# Readme for planetary-broadeners
 ===========================================================================
-License
+### License
 
 See the LICENSE file available on this GitHub page.
 
@@ -10,21 +10,20 @@ Copyright 2022 HITRAN Team. You may obtain a copy of the License at http://www.a
 
 ===========================================================================
 
-Citation
+### Citation
 
 Y. Tan, F.M. Skinner, S. Samuels, R.J. Hargreaves, R. Hashemi, I.E. Gordon (2022), Submitted to the Astrophysical Journal Supplement Series in March 2022
-"H$_2$, He, and CO$_2$ pressure-induced parameters for the HITRAN database. 
-Part II: Line lists of CO$_2$, N$_2$O, CO, SO$_2$, OH, OCS, H2CO, HCN, PH$_3$, H2S and GeH$_4$"
+"H<sub>2</sub>, He, and CO<sub>2</sub> pressure-induced parameters for the HITRAN database. Part II: Line lists of CO<sub>2</sub>, N<sub>2</sub>O, CO, SO<sub>2</sub>, OH, OCS, H2CO, HCN, PH<sub>3</sub>, H<sub>2</sub>S and GeH<sub>4</sub>"
 
 ===========================================================================
 
-Purpose
+### Purpose
 
 The broadening Python files are designed to apply broadening parameters to HITRAN line lists through dependency on rotational quantum numbers.
 
 ===========================================================================
 
-Explanation of the Input & Output Files
+### Explanation of the Input & Output Files
 
 Input files are given in the "Input-Broadening-Files" directory and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
@@ -33,16 +32,17 @@ We highly recommend that users directly download the current line lists from the
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
 
-	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting the 
-	read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches 
-	are not needed). This is due to the fact that the main data columns used to apply broadening parameters are 
-	dependent on rotational quantum number (J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
+	If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting 
+	the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules 
+	the branches are not needed). This is due to the fact that the main data columns used to apply 
+	broadening parameters are dependent on rotational quantum number (J lower, and for some molecules Ka 
+    lower) and Branch letter (P, Q or R).
 
 Output files are available in the "Output-Broadening-Files" directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
 ===========================================================================
 
-Accessing Broadening Parameters via HITRAN*online*
+### Downloading Broadening Parameters via HITRAN*online*
 
 To access these additional foreign-broadening parameters via the HITRAN database directly, HITRAN users can proceed to the [HITRAN Database](https://hitran.org/) to create a customized output file when downloading line-by-line data.
 
@@ -73,23 +73,26 @@ The steps are given as follows:
 	
 	Give your output format a description within the "Description:" box
 	
-	(You can also change the field separator and line endings, also you can apply a fixed width format and an output header line)
+	(You can also change the field separator and line endings, also you can apply a fixed width format 
+    and an output header line)
 	
 	Now click the green button "Save and Return to Data Search"
 	
 	(You might get a warning that reads:
 	"You have not selected "Global isotopologue ID" or "Molecule ID" and "Isotopologue ID" 
-	among of your parameters and so may have no way to know which transition corresponds to which species. Proceed?" 
-	Do not worry about this warning, we have the both the "Molecule ID" and "Isotopologue ID" within the HITRAN default .par format, 
-	which we already added to our output. Therefore, please proceed with confidence even if you receive this warning.)
+	among of your parameters and so may have no way to know which transition corresponds to which 
+	species. Proceed?" Do not worry about this warning, we have the both the "Molecule ID" and 
+	"Isotopologue ID" within the HITRAN default .par format, which we already added to our output. 
+    Therefore, please proceed with confidence even if you receive this warning.)
 	
 	Press "Okay" to exit the warning
 	
-	Press "Start Data Search" to retrieve the final line list and its corresponding references with the broadening parameters included.
+	Press "Start Data Search" to retrieve the final line list and its corresponding references with 
+    the broadening parameters included.
 
 ===========================================================================
 
-Definitions
+### Definitions
 
 |m| values are the rotational running index. |m| is defined with the following relationships to the J rotational quanta:
 
@@ -102,11 +105,12 @@ Broadening parameters refer to the following:
 	1) Lorentzian half-widths at half maximum (HWHM) denoted as γH2, γHe, γCO2 and γH2O for H2-, He-, 
 	CO2- and H2O-broadening respectively.
 	
-	2) Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined 
-	through the power law (see below).
+	2) Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and  
+	defined through the power law (see below).
 	
-	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available only for 
-	some HITRAN molecules and in some cases only for some specifically selected lines of these molecules. 
+	3) Collisional line shifts, denoted as δH2, δHe, δCO2, δH2O which at the moment are available 
+	only for some HITRAN molecules and in some cases only for some specifically selected lines of 
+    these molecules. 
 
 The power law equation for determining the HWHM at T (Temperature) is given as: γ(T) = γ(T$_0$)([T$_0$/T])$^η$
 	where T0 is the reference temperature (296K in HITRAN) and γ(T$_0$) is the HWHM at the reference temperature.
@@ -120,7 +124,7 @@ The 3$^{rd}$-to-4$^{th}$ order Padé approximant: γx(|m|) = (a0 + a1|m| + a2|m|
 
 ===========================================================================
 
-How to use the broadening Python scripts?
+### How to use the broadening Python scripts?
 
 The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
 For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO$_2$ (Sulfur Dioxide) line list.
@@ -131,17 +135,17 @@ To run these broadening Python files on your computer, make sure you have Python
     (alternatively, clone the "planetary-broadeners" git repository)
         
 Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
-
-	# Example of running the Python script CO.py with input file sample_CO.par and output file 
-    # sample_CO_out.par  using Anaconda's command prompt:
+```
+	# Example of running the Python script CO.py with input file sample_CO.par to create the output  
+    # file sample_CO_out.par from the command line:
 	
-	cd /full-path/Broadening-Files              # change to the Broadening-Files directory 
-                                                # in the "full-path" on your local machine
+	cd /full-path/Broadening-Files              # Move to the Broadening-Files directory, in the
+                                                # "full-path" on your local machine
 										       
-	python CO.py                                # run the Python script for carbon monoxide
+	python CO.py                                # Run the Python script for carbon monoxide
 										       
 	Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. 
-                                                # This example uses the sample input file in the  
+                                                # This example uses the sample_CO.par file in the  
                                                 # Input-Broadening-Files directory
 										       
 	sample_CO_out.par                           # You will be asked to enter the output filename. 
@@ -158,7 +162,7 @@ Once the broadening Python files and the Input files are downloaded, you can the
     # temperature dependence of helium broadening (n_He), broadening due to hydrogen (gamma_H2), 
     # temperature dependence of hydrogen broadening (n_H2), broadening due to carbon dioxide 
     # (gamma_CO2), and temperature dependence of carbon dioxide broadening (n_CO2).
-
+```
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
 ===========================================================================
