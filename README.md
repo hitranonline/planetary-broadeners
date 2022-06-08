@@ -29,9 +29,50 @@ We highly recommend that users directly download the current line lists from the
 
 These broadening codes can be used on any line list, however the user must remember to alter the format of the read-in file if they are not using a HITRAN .par formatted line list.
 
-If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting  the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number (J", and for some molecules K<sub>a</sub>") and Branch letter (e.g., P, Q or R).
+If the user is not using a HITRAN .par line list, then the primary columns to isolate when formatting  the read-in line list are the rotational quantum number(s) and the branch columns (for some molecules the branches are not needed). This is due to the fact that the main data columns used to apply broadening parameters are dependent on rotational quantum number (J", and for some molecules K"<sub>a</sub>) and Branch letter (e.g., P, Q or R).
 
 Output files are available in the `Output-Broadening-Files` directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
+
+
+## How to use the broadening Python scripts?
+
+The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
+For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO<sub>2</sub> (Sulfur Dioxide) line list.
+
+To run these broadening python scripts, make sure you have Python installed and the broadening Python files downloaded on your local machine.
+
+- Download the complete contents of the `planetary-broadeners` repository to local storage
+- Alternatively, clone the `planetary-broadeners` repository to your local machine
+        
+Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
+```
+# Example of running the Python script CO.py with input file sample_CO.par to create the output  
+# file sample_CO_out.par from the command line:
+	
+cd /full-path/Broadening-Files              # Move to the Broadening-Files directory, in the
+                                            # "full-path" on your local machine
+
+python CO.py                                # Run the Python script for carbon monoxide
+
+Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. 
+                                            # This example uses the sample_CO.par file in the  
+                                            # Input-Broadening-Files directory
+
+sample_CO_out.par                           # You will be asked to enter the output filename. 
+                                            # This example uses recreates the sample_CO_out.par   
+                                            # file from the Output-Broadening-Files directory
+							       
+# If the Python script is successful, then a final output message will be given (e.g., the 
+# message below is from CO.py)
+
+> end of calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
+
+# This message means that the original HITRAN .par input file is given as part of the output 
+# (160.par), with additional columns containing the pressure broadening due to helium (gamma_He), 
+# temperature dependence of helium broadening (n_He), broadening due to hydrogen (gamma_H2), 
+# temperature dependence of hydrogen broadening (n_H2), broadening due to carbon dioxide 
+# (gamma_CO2), and temperature dependence of carbon dioxide broadening (n_CO2).
+```
 
 
 ## Downloading Broadening Parameters via HITRAN*online*
@@ -89,45 +130,8 @@ The 3<sup>rd</sup>-to-4<sup>th</sup> order Pad&eacute; approximant:
 where |m| is the rotational running index, as defined previously above.
 
 
-## How to use the broadening Python scripts?
+## Further information
 
-The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
-For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO<sup>2</sup> (Sulfur Dioxide) line list.
-
-To run these broadening python scripts, make sure you have Python installed and the broadening Python files downloaded on your local machine.
-
-- Download the complete contents of the `planetary-broadeners` repository to local storage
-- Alternatively, clone the `planetary-broadeners` repository to your local machine
-        
-Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
-```
-# Example of running the Python script CO.py with input file sample_CO.par to create the output  
-# file sample_CO_out.par from the command line:
-	
-cd /full-path/Broadening-Files              # Move to the Broadening-Files directory, in the
-                                            # "full-path" on your local machine
-
-python CO.py                                # Run the Python script for carbon monoxide
-
-Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. 
-                                            # This example uses the sample_CO.par file in the  
-                                            # Input-Broadening-Files directory
-
-sample_CO_out.par                           # You will be asked to enter the output filename. 
-                                            # This example uses recreates the sample_CO_out.par   
-                                            # file from the Output-Broadening-Files directory
-							       
-# If the Python script is successful, then a final output message will be given (e.g., the 
-# message below is from CO.py)
-
-> end of calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
-
-# This message means that the original HITRAN .par input file is given as part of the output 
-# (160.par), with additional columns containing the pressure broadening due to helium (gamma_He), 
-# temperature dependence of helium broadening (n_He), broadening due to hydrogen (gamma_H2), 
-# temperature dependence of hydrogen broadening (n_H2), broadening due to carbon dioxide 
-# (gamma_CO2), and temperature dependence of carbon dioxide broadening (n_CO2).
-```
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
 
