@@ -26,7 +26,7 @@ The broadening Python files are designed to apply broadening parameters to HITRA
 
 Explanation of the Input & Output Files
 
-Input files are given in the "Input Broadening Files" folder and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
+Input files are given in the "Input-Broadening-Files" directory and are *sampled* portions of the HITRAN2020 line list data (not the complete line list).
 In particular, the input files are HITRAN line lists in default format called .par (see [HITRAN Documentation](https://hitran.org/docs/definitions-and-units/) for an explanation of the .par format)
 
 We highly recommend that users directly download the current line lists from the [HITRAN](https://hitran.org/) database prior to applying these broadening codes.
@@ -38,7 +38,7 @@ These broadening codes can be used on any line list, however the user must remem
 	are not needed). This is due to the fact that the main data columns used to apply broadening parameters are 
 	dependent on rotational quantum number (J lower, and for some molecules Ka lower) and Branch letter (P, Q or R).
 
-Output files are available in the "Output Broadening Files" folder. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
+Output files are available in the "Output-Broadening-Files" directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
 ===========================================================================
 
@@ -132,32 +132,32 @@ To run these broadening Python files on your computer, make sure you have Python
         
 Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
 
-	# Example of running the Python script CO.py with input file sample_CO.par and output file sample_CO_out.par 
-    # using Anaconda's command prompt:
+	# Example of running the Python script CO.py with input file sample_CO.par and output file 
+    # sample_CO_out.par  using Anaconda's command prompt:
 	
-	cd /full-path/Broadening-Files              # change to the Broadening-Files directory in the "full-path" 
-                                                # on your local machine
+	cd /full-path/Broadening-Files              # change to the Broadening-Files directory 
+                                                # in the "full-path" on your local machine
 										       
 	python CO.py                                # run the Python script for carbon monoxide
 										       
-	Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. This example 
-                                                # uses the sample input file in the Input-Broadening-Files  
-                                                # directory
+	Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. 
+                                                # This example uses the sample input file in the  
+                                                # Input-Broadening-Files directory
 										       
-	Output-Broadening-Files/sample_CO_out.par   # You will be asked to enter the output filename. This example 
-                                                # uses the sample output file in the Output-Broadening-Files  
-                                                # directory
+	sample_CO_out.par                           # You will be asked to enter the output filename. 
+                                                # This example uses recreates the sample_CO_out.par   
+                                                # file from the Output-Broadening-Files directory
 										       
-	# If the Python script is successful, then a final output message will be given (e.g., the message below is 
-    # from CO.py)
+	# If the Python script is successful, then a final output message will be given (e.g., the 
+    # message below is from CO.py)
 					
-	> end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
+	> end of calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
 							
-    # This message means that the original HITRAN .par input file is given as part of the output (160.par), with 
-    # additional columns containing the pressure broadening due to helium (gamma_He), temperature dependence of 
-    # helium broadening (n_He), broadening due to hydrogen (gamma_H2), temperature dependence of hydrogen broadening 
-    # (n_H2), broadening due to carbon dioxide (gamma_CO2), and temperature dependence of carbon dioxide broadening 
-    # (n_CO2).
+    # This message means that the original HITRAN .par input file is given as part of the output 
+    # (160.par), with additional columns containing the pressure broadening due to helium (gamma_He), 
+    # temperature dependence of helium broadening (n_He), broadening due to hydrogen (gamma_H2), 
+    # temperature dependence of hydrogen broadening (n_H2), broadening due to carbon dioxide 
+    # (gamma_CO2), and temperature dependence of carbon dioxide broadening (n_CO2).
 
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
