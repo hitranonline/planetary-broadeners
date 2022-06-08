@@ -34,7 +34,7 @@ If the user is not using a HITRAN .par line list, then the primary columns to is
 Output files are available in the `Output-Broadening-Files` directory. The output files are examples of what users should receive if they run the given input files correctly from the "Input Broadening Files" folder by using the broadening Python scripts, given in the "Broadening .py Files" folder.
 
 
-## How to use the broadening Python scripts?
+## How to use the broadening Python scripts
 
 The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
 For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO<sub>2</sub> (Sulfur Dioxide) line list.
