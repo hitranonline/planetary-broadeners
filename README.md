@@ -125,28 +125,39 @@ How to use the broadening Python scripts?
 The broadening Python files are labeled according to molecule type; the molecule the broadening file is labeled for should not be used on a different molecule.
 For instance, the CO (Carbon Monoxide) broadening file should not be used to apply broadening to an SO$_2$ (Sulfur Dioxide) line list.
 
-To run these broadening Python files on your computer, make sure you have Python and the broadening Python files downloaded on your local machine.
-Once the broadening Python files and the Input files are in the same folder on your machine, you can then run the Python scripts on the command line (example below).
+To run these broadening Python files on your computer, make sure you have Python installed and the broadening Python files downloaded on your local machine.
 
-Example of running the Python script of CO.py with Input file CO.par and Output file Output_CO.par with Anaconda's command prompt tool:
+	Download the complete "planetary-broadeners" repository directory to local storage from GitHub
+    (alternatively, clone the "planetary-broadeners" git repository)
+        
+Once the broadening Python files and the Input files are downloaded, you can then run the Python scripts on the command line (example below).
 
-(First locate the directory where the downloaded Broadening Python files are located): 
+	# Example of running the Python script CO.py with input file sample_CO.par and output file sample_CO_out.par 
+    # using Anaconda's command prompt:
 	
-	cd filename (to go to the file named filename)
-
-	cd.. (to go back to the previous folder you were in)
+	cd /full-path/Broadening-Files              # change to the Broadening-Files directory in the "full-path" 
+                                                # on your local machine
 										       
-	Python CO.py (once you are in the folder with the Python script and input file)
+	python CO.py                                # run the Python script for carbon monoxide
 										       
-	CO.par (You will be asked to type the input file name)
+	Input-Broadening-Files/sample_CO.par        # You will be asked to enter the input filename. This example 
+                                                # uses the sample input file in the Input-Broadening-Files  
+                                                # directory
 										       
-	Output_CO.par (You will be asked to type the output file name)
+	Output-Broadening-Files/sample_CO_out.par   # You will be asked to enter the output filename. This example 
+                                                # uses the sample output file in the Output-Broadening-Files  
+                                                # directory
 										       
-	(If the Python script works correctly then the last message is given below (in this case for CO.py))
+	# If the Python script is successful, then a final output message will be given (e.g., the message below is 
+    # from CO.py)
 					
-	end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
+	> end for calculation: output "160.par + gamma_He + n_He + gamma_H2 + n_H2 + gamma_CO2 + n_CO2"
 							
-(This message means that the original HITRAN .par input file is given as part of the output, with extra columns (on the right-hand side) containing broadening of Helium, temperature dependence of Helium, broadening of Hydrogen, temperature dependence of Hydrogen, broadening of Carbon Dioxide and temperature dependence of Carbon Dioxide)
+    # This message means that the original HITRAN .par input file is given as part of the output (160.par), with 
+    # additional columns containing the pressure broadening due to helium (gamma_He), temperature dependence of 
+    # helium broadening (n_He), broadening due to hydrogen (gamma_H2), temperature dependence of hydrogen broadening 
+    # (n_H2), broadening due to carbon dioxide (gamma_CO2), and temperature dependence of carbon dioxide broadening 
+    # (n_CO2).
 
 For questions related to using the Broadening Python files or about using HITRAN data please email info@hitran.org.
 
