@@ -74,7 +74,7 @@ The steps are given as follows:
 
 Broadening parameters refer to the following:
 
-1. Lorentzian half-widths at half maximum (HWHM) denoted as γH2, γHe, γCO2 and γH2O for H2-, He-, CO2- and H2O-broadening respectively.
+1. Lorentzian half-widths at half maximum (HWHM) denoted as &gamma;<sub>H2</sub>, &gamma;<sub>He</sub>, &gamma;<sub>CO2</sub> and &gamma;<sub>H2O</sub> for H<sub>2</sub>-, He-, CO<sub>2</sub>- and H<sub>2</sub>O-broadening respectively.
 	
 2. Temperature dependence (exponent) of these half widths, denoted as ηH2, ηHe, ηCO2, ηH2O and defined through the power law (see below).
 	
