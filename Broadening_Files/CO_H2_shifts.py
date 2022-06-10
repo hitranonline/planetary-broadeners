@@ -95,8 +95,8 @@ for i in range(len(Branch)):
     y = inx[i]
     z = multipliers_H2[i]
     H2_shifts.append(float(dH2(x, y, z)))# H2 pressure-induced line shifts
-    err_H2.append("3")                   # He shifts uncertainty code
-    ref_H2.append("1345")# He shifts data references: Described in Tan et al. 2022 CO-H2 broadening were obtained by fitting the Padé approximation on data from Malathy Devi et al. 2004 https://dx.doi.org/10.1016/j.jms.2004.05.006 and Sung and Varanasi 2004 https://dx.doi.org/10.1016/S0022-4073(03)00202-4
+    err_H2.append("3")                   # H2 shifts uncertainty code
+    ref_H2.append("1345")# H2 shifts data references: Described in Tan et al. 2022 CO-H2 broadening were obtained by fitting the Padé approximation on data from Malathy Devi et al. 2004 https://dx.doi.org/10.1016/j.jms.2004.05.006 and Sung and Varanasi 2004 https://dx.doi.org/10.1016/S0022-4073(03)00202-4
     
 #------------create new HITRAN data file with H2 shifts for CO--------
 with open(savepath,'w') as out:
