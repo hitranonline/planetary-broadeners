@@ -77,6 +77,26 @@ def err_gHe(x):
         err = 4
     return err    
     
+#-----------------define function for nHe---------------------------------------
+def nHe(x):
+    a0 = -0.0068858
+    a1 =  0.7207695
+
+    if x>=0 and x<=20:
+        nnHe = a0*x+a1
+    elif x>20:
+        nnHe = 0.58
+    else:
+        print ("error in calculation")    
+    return nnHe # x in these calculations stands for |m|
+
+def err_nHe(x):
+    if x<=20:
+        err = 4
+    elif x>=20:
+        err = 3
+    return err      
+    
 #-----------------define function for gH2---------------------------------------
 def gH2(x):
     a0 = 0.30051
@@ -167,9 +187,9 @@ ref_CO2 = []
 for i in range(len(m)):
     xx = m[i]
     gamma_He.append(float(gHe(xx)))   # He broadening
-    n_He.append('0.3000')             # He temperature dependence
-    err_n_He.append('4')              # He temperature dependence uncertainty code
-    ref_n_He.append('1501')# He temperature dependence Data Reference: Nakamichi et al. 2006 https://doi.org/10.1039/B511772K
+    n_He.append(float(nHe(xx)))       # He temperature dependence
+    err_n_He.append(str(err_nHe(xx))) # He temperature dependence uncertainty code
+    ref_n_He.append('1521')# He temperature dependence Data Reference: Deng et al. 2009 https://doi.org/10.1016/j.jms.2009.02.021, Brimacombe & Reid https://doi.org/10.1109/JQE.1983.1071773
     err_He.append(str(err_gHe(xx)))   # He uncertainty code
     ref_He.append("1511")  # He Broadening Data Reference: Tan et al. 2022 Padé fit to data from Nakamichi et al. 2006 https://doi.org/10.1039/B511772K
     gamma_H2.append(float(gH2(xx)))   # H2 broadening
@@ -188,7 +208,7 @@ for i in range(len(m)):
 #------------create new HITRAN data file with He, H2 and CO2 broadening and temperature dependence for CO2--------
 with open(savepath,'w') as out:
     for i in range(len(m)):
-        out.write("%160s, %8.4f, %3s, %3s, %3s, %3s, %3s, %8.4f, %3s, %3s, %3s, %3s, %3s, %8.4f, %3s, %3s, %8.4f, %3s, %3s \n" %( Parline[i],
+        out.write("%160s, %8.4f, %3s, %3s, %8.3f, %3s, %3s, %8.4f, %3s, %3s, %3s, %3s, %3s, %8.4f, %3s, %3s, %8.4f, %3s, %3s \n" %( Parline[i],
         gamma_He[i], err_He[i], ref_He[i], n_He[i], err_n_He[i], ref_n_He[i],
         gamma_H2[i], err_H2[i], ref_H2[i], n_H2[i], err_n_H2[i], ref_n_H2[i],
         gamma_CO2[i], err_CO2[i], ref_CO2[i], n_CO2[i], err_n_CO2[i], ref_n_CO2[i]))
